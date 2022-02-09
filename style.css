@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Charm&family=Orbitron:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Charm&family=Orbitron:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Press+Start+2P&display=swap');
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+
+}
+.container-nav{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 15%;
+    padding: 25px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(80deg, crimson , rgba(204,154,129,0.7));
+
+
+}
+.container-nav::before{
+    content: "";
+    display: block;
+    position: absolute;
+    background: linear-gradient(-90deg,black , transparent);
+    top: 0%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height:10px;
+    animation: border-roam1 3.5s forwards ease;
+    transition: border-roam1 3.5s forwards ease;
+
+}
+.container-nav::after{
+    content: "";
+    display: block;
+    position: absolute;
+    background: linear-gradient(-90deg,transparent,black);
+    top: 93%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height:10px;
+    animation: border-roam2 3.5s forwards  ease;
+    transition: border-roam2 3.5s forwards ease;
+
+}
+@keyframes border-roam1 {
+    0%{
+        transform: translateX(-100%);
+        overflow: hidden;
+    }
+    100%{
+        transform: translateX(0%);
+        overflow:hidden;
+    }
+
+}
+@keyframes border-roam2{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+
+}
+img,p,li, .toggle{
+    position: absolute;
+    }
+img{
+    left: 100px;
+}
+p{
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.7);
+    font-size: 2em;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.menu{
+    position: absolute;
+    right: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: transparent;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.toggle{
+    cursor: pointer;
+     position: absolute;
+    font-size: 2em;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    z-index: 10000;
+    background: white;
+     box-shadow: 0px 0px 5px rgba(0,0,0,0.7),
+                 0px 0px 10px rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1.25s ease;
+    
+}
+li{ z-index: 100;
+    position: absolute;
+    list-style: none;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    background: white;
+    transition: all 500ms ease-in-out;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.7),
+                0px 0px 8px rgba(0,0,0,0.5);
+}
+.menu.active li{
+    transform: translateX(calc(-230px / 3*var(--i)));
+}
+.menu.active  .toggle{
+    transform: rotate(315deg);
+
+}
+/*Year 1*/
+
+.container-year1{
+    top: 15%;
+    margin: 0%;
+    width: 100%;
+    height: 25%;
+    background: linear-gradient(-45deg , #FF5151 , #9818D6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+   animation: boxshadowing 30s infinite ease;
+   transition: all 30s ease-in-out;
+
+    
+  
+}
+
+.Year1{
+    position: absolute;
+    top:0;
+    background: transparent;
+    width: 100% !important;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    justify-content: center;
+    font-size: 2em;
+    font-family: 'Charm', cursive;
+   
+}
+.container-year1 .One{
+    width: 80%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: transparent;
+    border-radius: 5px;
+    color: #EDEDED;
+    font-family: 'Carter One', cursive;
+    margin-top: 10px;
+    font-size: 1.5em;
+    box-shadow: inset 0px 0px 10px rgba(255,255,255,0.7), 
+                inset 0px 0px 20px rgb(255,255,255,0.5),
+                4px 5px 10px rgba(255,255,255,0.3),
+                -4px -5px 10px rgba(255,255,255,0.3)
+                  ;
+ 
+}
+/* Year 2 */
+.container-year2{
+    top: 40%;
+    margin: 0%;
+    width: 100%;
+    height: 25%;
+    background: linear-gradient(60deg, #2C7873, green);
+    display: flex;
+    background-size:cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    animation: boxshadowing 30s infinite  alternate-reverse ease;
+    transition: all 30s ease-in-out;
+
+}
+.Year2{
+    position: absolute;
+    top:0;
+    color: white;
+    background: transparent;
+    width: 100% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    font-family: 'Charm', cursive;
+}
+.container-year2 .Two{
+    width: 80%;
+    height: 50%;
+    box-shadow: inset 0px 0px 10px rgba(255,255,255,0.7), 
+    inset 0px 0px 20px rgb(255,255,255,0.5),
+    4px 5px 10px rgba(255,255,255,0.3),
+    -4px -5px 10px rgba(255,255,255,0.3)
+      ;
+    color: #F5DEA3;
+    display: flex;
+    font-family: 'Carter One', cursive;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: transparent;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 1.5em;
+}
+/*Year 3*/
+.container-year3{
+    top: 65%;
+    margin: 0%;
+    width: 100%;
+    height: 25%;
+    background: linear-gradient(30deg , #FFE162, #FF6464);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    animation: boxshadowing 30s infinite ease;
+    transition: all 30s ease-in-out;
+}
+.Year3{
+    position: absolute;
+    top:0;
+    background: transparent;
+    width: 100% !important;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    font-family: 'Charm', cursive;
+}
+.container-year3 .Three{
+    width: 80%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #EEEEEE;
+    background: transparent;
+    font-family: 'Carter One', cursive;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: inset 0px 0px 10px rgba(255,255,255,0.7), 
+    inset 0px 0px 20px rgb(255,255,255,0.5),
+    4px 5px 10px rgba(255,255,255,0.3),
+    -4px -5px 10px rgba(255,255,255,0.3)
+      ;
+    font-size: 1.5em;
+}
+/* Date and Time */
+.container-datentime{
+    position: absolute;
+    top: 90%;
+    width: 100%;
+    height: 10%;
+    margin: 0;
+
+}
+.dnt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:0%;
+    width: 100vw;
+    height: auto;
+}
+.date{
+    width: 50%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(80deg, crimson , rgba(200, 104, 57, 0.7));
+        padding: 25px;
+    font-size: 1.7em;
+    font-weight: bolder;
+    color: white;
+    border: 5px solid black;
+   font-family: 'Charm', cursive;
+}
+.time{
+    border-top: 5px solid black;
+    border-right: 5px solid black;
+    border-bottom: 5px solid black;
+    background: linear-gradient(80deg,  rgba(187, 92, 44, 0.7), crimson);
+    color: white;
+    width: 50%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    font-size: 1.7em;
+    font-family: 'Orbitron', sans-serif;
+
+}
+/*box shadow the year divs */
+@keyframes boxshadowing {
+  50% , 75%{
+        box-shadow:inset 0px 0px 10px rgba(0,0,0,1),
+        inset 0px 0px 20px rgba(0,0,0,0.5);
+        filter: hue-rotate(360deg);
+    }
+   0%, 100%{
+      box-shadow: none !important;
+      filter: hue-rotate(0deg);
+
+    }
+    
+}
+
+@media (max-width:750px)
+{   .image {
+    position: absolute;
+    left: 25%;
+}
+    .menu{
+    position: absolute;
+    left: 5%;
+
+
+}
+ .toggle{
+     position: absolute;
+     left: 2%;
+ }
+ li{ 
+     position: absolute;
+     left: 2%;
+ }
+
+    .menu.active li{
+        transform: translateY(calc(230px / 3*var(--i)));
+    }
+    .menu.active  .toggle{
+        transform: rotate(315deg);
+    
+    }
+    .time{
+        font-size: 1.25em;
+    
+    }
+    .container-year3 .Three,.container-year1 .One,.container-year2 .Two{
+        font-size: 1em;
+    }
+}

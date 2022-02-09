@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRIIT SCHEDULE</title>
+    <link rel="stylesheet" href="./style.css">
+   
+</head>
+<body>
+    <div class="container-nav">
+        <img src="./logo.png" class="image" alt="logo">
+    
+        <div class="menu">
+            <div class="toggle"><ion-icon name="add-outline"></ion-icon></div>
+            <li style="--i:1;"><a href="https://mail.google.com" target="_blank"><ion-icon name="mail-outline"></ion-icon></a></li>
+            <li style="--i:2;"><a href="" target="_blank"><ion-icon name="documents-outline"></ion-icon></a></li>
+            <li style="--i:3"><a href="https://sriit.ac.in/" target="_blank"><ion-icon name="earth-outline"></ion-icon></a></li>
+        </div>
+    </div>
+    <div class="container-year1">
+        <div class="Year1">Year-1</div>
+       <div class="One"> 
+        <div id="year-1-teacher"></div>
+        <div id="year-1-subject"></div>
+       </div>
+    </div>
+
+    <div class="container-year2">
+        <div class="Year2">Year-2</div>
+            <div class="Two">
+        <div id="year-2-teacher"></div>
+        <div id="year-2-subject"></div>
+       </div>
+    </div>
+    <div class="container-year3">
+        <div class="Year3">Year-3</div>
+       <div class="Three">
+        <div id="year-3-teacher"></div>
+        <div id="year-3-subject"></div>
+       </div>
+    </div>
+    <div class="container-datentime">
+        <div class="dnt">
+            <span class="date">
+      
+            </span>
+            <span class="time">
+     
+            </span>
+
+        </div>
+    </div>
+    <script src="./schedule.js"></script>
+    <script>
+        let menu = document.querySelector(".menu")
+        let toggle = document.querySelector(".toggle")
+        toggle.onclick = function(){
+            menu.classList.toggle("active")
+        }
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+*{
+    padding: 0;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   background-color: crimson;
+}
+.container-nav{
+    width: 100%;
+    height: 100px;
+    position: relative;
+    padding: 25px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+img,p,li, .toggle{
+    position: absolute;
+    }
+img{
+    left: 100px;
+}
+p{
+    font-size: 2em;
+    color: white;
+}
+.menu{
+    position: absolute;
+    right: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: transparent;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.toggle{
+    cursor: pointer;
+     position: absolute;
+    font-size: 2em;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    z-index: 10000;
+    background: white;
+     box-shadow: 0px 0px 5px rgba(255,0,0,0.7),
+                 0px 0px 10px rgba(255,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1.25s ease;
+    
+}
+li{
+    position: absolute;
+    list-style: none;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    background: white;
+    transition: all 500ms ease-in-out;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.7),
+                0px 0px 8px rgba(0,0,0,0.5);
+}
+.menu.active li{
+    transform: translateY(calc(230px / 3*var(--i)));
+}
+.menu.active  .toggle{
+    transform: rotate(315deg);
+
+}
