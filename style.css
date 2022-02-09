@@ -18,6 +18,71 @@ body{
   color: #F4FCFE !important;
 
 }
+.opening{
+    background: black !important;
+    color: #ffa800;
+    text-shadow: 0px 0px 10px rgba(255, 168, 0, 1),
+    0px 0px 20px rgba(255, 168, 0, 0.8),
+    0px 0px 30px rgba(255, 168, 0, 0.4),
+    0px 0px 40px rgba(255, 168, 0, 0.2);
+    width: 100% !important;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 100000;
+    opacity: 1;
+    font-size: 3em;
+    text-transform: uppercase;
+    letter-spacing:2.5px;
+    animation: fade 5s forwards ease-out;
+    overflow: hidden;
+     }
+.opening h1{
+    animation: fade2 2s forwards ease-out;
+    font-family: 'Charm', cursive;
+    transition: all 2s ease-out;
+
+    
+}
+@keyframes fade2 {
+    0%{
+        opacity:0;
+        transform: translateX(-100%);
+    }
+    50%{
+        opcaity: 0.5;
+        transform: translateX(0%);
+    }
+    90%{
+        opacity:1;
+        z-index: -10000;
+        transform: translateX(0%);
+    }
+    100%{
+        opcaity: 0;
+        text: none !important;
+    }
+    
+}
+@keyframes fade {
+    0%{
+        opacity:1;
+    }
+    50%{
+        opacity:1;
+    }
+    90%{
+        opacity:0;
+    }
+    100%{
+        opacity:0;
+        z-index: -10000;
+    }
+
+    
+}
 .container-nav{
     position: absolute;
     top: 0;
@@ -45,7 +110,8 @@ body{
     height:5px;
     animation: border-roam1 3.5s forwards ease;
     transition: border-roam1 3.5s forwards ease;
-
+    animation-delay: 3.25s;
+    opacity:0%;
 }
 .container-nav::after{
     content: "";
@@ -59,25 +125,31 @@ body{
     height:5px;
     animation: border-roam2 3.5s forwards  ease;
     transition: border-roam2 3.5s forwards ease;
+    animation-delay: 3.25s;
+    opacity: 0%;
 
 }
 @keyframes border-roam1 {
     0%{
         transform: translateX(-100%);
         overflow: hidden;
+        opacity:1;
     }
     100%{
         transform: translateX(0%);
         overflow:hidden;
+        opacity:1;
     }
 
 }
 @keyframes border-roam2{
     0%{
         transform: translateX(100%);
+        opacity:1;
     }
     100%{
         transform: translateX(0%);
+        opacity:1;
     }
 
 }
@@ -368,19 +440,25 @@ border: 2px solid #ffa800;
     .menu{
     position: absolute;
     left: 5%;
+    width: 40px;
+    height: 40px;
 
 }
  .toggle{
      position: absolute;
      left: 2%;
+     width: 40px;
+     height: 40px;
  }
  li{ 
      position: absolute;
      left: 2%;
+     width: 40px;
+     height: 40px;
  }
 
     .menu.active li{
-        transform: translateY(calc(230px / 3*var(--i)));
+        transform: translateY(calc(150px / 3*var(--i)));
     }
     .menu.active  .toggle{
         transform: rotate(315deg);
@@ -392,6 +470,9 @@ border: 2px solid #ffa800;
     }
     .container-year3 .Three,.container-year1 .One,.container-year2 .Two{
         font-size: 1em;
-        padding:25px;
+       padding:25px;
+    }
+    .opening{
+        font-size: 1em;
     }
 }
