@@ -392,5 +392,6 @@ border: 2px solid #ffa800;
     }
     .container-year3 .Three,.container-year1 .One,.container-year2 .Two{
         font-size: 1em;
+        padding:25px;
     }
 }
