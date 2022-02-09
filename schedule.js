@@ -29,11 +29,10 @@ setInterval(() => {
 const dte = new Date()
 var d = dte.getDay()
 var t = dte.getTime()
-// var h = dte.getHours()
-// var mins = dte.getMinutes()
+var h = dte.getHours()
+var mins = dte.getMinutes()
 var s = dte.getSeconds()
-var h = 10
-var mins = 40
+
 
 console.log(weekdat[d])
     dt[0].textContent= weekdat[d]
